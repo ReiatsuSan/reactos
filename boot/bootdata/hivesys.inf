@@ -570,6 +570,10 @@ HKLM,"SYSTEM\CurrentControlSet\Control\Keyboard Layouts\0000040c","Layout File",
 HKLM,"SYSTEM\CurrentControlSet\Control\Keyboard Layouts\0000040c","Layout Text",0x00000000,%FRENCH%
 HKLM,"SYSTEM\CurrentControlSet\Control\Keyboard Layouts\0000040c","Layout Display Name",0x00000000,"@%SystemRoot%\system32\input.dll,-5010"
 
+HKLM,"SYSTEM\CurrentControlSet\Control\Keyboard Layouts\0000100c","Layout File",0x00000000,"kbdsf.dll"
+HKLM,"SYSTEM\CurrentControlSet\Control\Keyboard Layouts\0000100c","Layout Text",0x00000000,%SWISS_FRENCH%
+HKLM,"SYSTEM\CurrentControlSet\Control\Keyboard Layouts\0000100c","Layout Display Name",0x00000000,"@%SystemRoot%\system32\input.dll,-5023"
+
 HKLM,"SYSTEM\CurrentControlSet\Control\Keyboard Layouts\0000080c","Layout File",0x00000000,"kbdbe.dll"
 HKLM,"SYSTEM\CurrentControlSet\Control\Keyboard Layouts\0000080c","Layout Text",0x00000000,%BELGIAN_FRENCH%
 HKLM,"SYSTEM\CurrentControlSet\Control\Keyboard Layouts\0000080c","Layout Display Name",0x00000000,"@%SystemRoot%\system32\input.dll,-5002"
@@ -2386,6 +2390,7 @@ SLOVAK_QWERTY = "Slovak (QWERTY)"
 SPANISH = "Spanish"
 SWEDISH = "Swedish"
 SWISS_GERMAN = "Swiss (German)"
+SWISS_FRENCH = "Swiss (French)"
 TATAR = "Tatar"
 THAI_KEDMANEE = "Thai Kedmanee"
 THAI_KEDMANEE_NON_SHIFTLOCK = "Thai Kedmanee (non-ShiftLock)"
