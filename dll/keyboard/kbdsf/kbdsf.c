@@ -1,10 +1,10 @@
 /*
  * ReactOS French (Switzerland) ASCII Keyboard layout
- * Copyright (C) 2005 ReactOS
+ * Copyright (C) 2010 ReactOS
+ * Author: Abelenda David <abelendadavid@msn.com>
  * License: LGPL, see: LGPL.txt
  *
- * Thanks to: http://www.barcodeman.com/altek/mule/scandoc.php
- * and http://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html
+ * Thanks to: http://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html
  * and http://www.unicode.org/charts/
  */
 
