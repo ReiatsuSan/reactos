@@ -11,25 +11,35 @@ _onexit_t CDECL __dllonexit(_onexit_t func, _onexit_t **start, _onexit_t **end)
 
   TRACE("(%p,%p,%p)\n", func, start, end);
 
-  if (!start || !*start || !end || !*end)
+  if (!start)
   {
-   FIXME("bad table\n");
-   return NULL;
+    /* First time we are called. Initialize our array */
+    tmp = calloc(1, sizeof(_onexit_t));
+    if (!tmp)
+    {
+        return NULL;
+    }
+
+    len = 1;
+  }
+  else
+  {
+    len = (*end - *start);
+
+    TRACE("table start %p-%p, %d entries\n", *start, *end, len);
+
+    if (++len <= 0)
+      return NULL;
+
+    tmp = realloc(*start, len * sizeof(_onexit_t));
   }
 
-  len = (*end - *start);
-
-  TRACE("table start %p-%p, %d entries\n", *start, *end, len);
-
-  if (++len <= 0)
-    return NULL;
-
-  tmp = realloc(*start, len * sizeof(_onexit_t));
   if (!tmp)
     return NULL;
   *start = tmp;
   *end = tmp + len;
   tmp[len - 1] = func;
-  TRACE("new table start %p-%p, %d entries\n", *start, *end, len);
+  TRACE("new table start %p-%p, %d entries\n", *start, *end, len);  
+
   return func;
 }
